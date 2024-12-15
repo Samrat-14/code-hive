@@ -9,7 +9,7 @@ const getInitialState = () => {
     return {
       language: 'javascript',
       theme: 'vs-dark',
-      fontSize: 16,
+      fontSize: 14,
     };
   }
 
@@ -17,7 +17,7 @@ const getInitialState = () => {
   return {
     language: localStorage.getItem('editor-language') || 'javascript',
     theme: localStorage.getItem('editor-theme') || 'vs-dark',
-    fontSize: Number(localStorage.getItem('editor-font-size')) || 16,
+    fontSize: Number(localStorage.getItem('editor-font-size')) || 14,
   };
 };
 
