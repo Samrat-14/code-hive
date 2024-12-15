@@ -9,7 +9,6 @@
 [ ] refactor: same size for comments, code-executions in profile; expand to see more { refactor code-block}
 
 [ ] fix: not-found page
-[ ] fix: sign in button style
 [ ] fix: dark mode for toast, clerk
 [ ] fix: footer pages
 
