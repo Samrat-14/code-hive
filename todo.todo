@@ -1,0 +1,24 @@
+[ ] priority: mobile responsive
+
+[ ] refactor: reduce use of use-client especially in page.tsx
+[ ] refactor: breakdown default codes for each language
+[ ] refactor: inconsistent components used in multiple places like navigation-header
+[ ] refactor: break into smaller components for reusability
+[ ] refactor: global ui components like run-btn, copy-btn, dropdown
+[ ] refactor: sync snippet theme from user config
+[ ] refactor: same size for comments, code-executions in profile; expand to see more { refactor code-block}
+
+[ ] fix: not-found page
+[ ] fix: sign in button style
+[ ] fix: dark mode for toast, clerk
+[ ] fix: footer pages
+
+[ ] feat: add atomonedark theme
+[ ] feat: add clear code btn in editor
+[ ] feat: select multiple language for filter in snippets
+[ ] feat: pagination in snippets page
+[ ] feat: scroll-to-top btn in profile
+
+[ ] future: share as screenshot
+[ ] future: share for collaboration via link
+[ ] future: take input as buffer

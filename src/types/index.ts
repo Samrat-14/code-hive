@@ -55,6 +55,18 @@ export interface CodeEditorState {
   runCode: () => Promise<void>;
 }
 
+export interface User {
+  _id: Id<'users'>;
+  _creationTime: number;
+  proSince?: number | undefined;
+  lemonSqueezyCustomerId?: string | undefined;
+  lemonSqueezyOrderId?: string | undefined;
+  name: string;
+  userId: string;
+  email: string;
+  isPro: boolean;
+}
+
 export interface Snippet {
   _id: Id<'snippets'>;
   _creationTime: number;
