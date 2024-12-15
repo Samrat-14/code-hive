@@ -1,7 +1,7 @@
 export default {
   providers: [
     {
-      domain: 'https://dashing-urchin-19.clerk.accounts.dev/',
+      domain: process.env.CLERK_URL,
       applicationID: 'convex',
     },
   ],
