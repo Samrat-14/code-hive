@@ -19,9 +19,11 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
   title: 'Code Hive',
   description:
     'An online code editor designed for developers to write, debug, and share code seamlessly. Build, innovate, and connect in the hive of creativity.',
+  keywords: ['code editor', 'code', 'editor'],
 };
 
 export default function RootLayout({

@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CodeHive
 
-## Getting Started
+Code Hive is a powerful online code editor built for seamless collaboration and efficient coding. It enables developers to write, debug, and share code in real-time, making it the perfect hive of creativity for teams and individuals alike.
 
-First, run the development server:
+![CodeHive_screenshot](preview.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📋 Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Stunning UI**: A beautifully designed code editor interface for an enhanced coding experience.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Remote Code** Execution: Execute code remotely and get instant output for supported languages.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Error Handling**: Clear and concise error messages to debug code effectively.
 
-## Learn More
+- **Snippet Management**: Save, store, and share your code snippets effortlessly.
 
-To learn more about Next.js, take a look at the following resources:
+- **Discover Snippets**: Explore and discover shared snippets from global users in the community.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Pro Plan**: Unlock additional programming languages and premium features with the Pro subscription.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Upcoming Features**: Stay tuned for exciting new features to elevate your coding experience!
 
-## Deploy on Vercel
+## 🛠️ Built With
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [React](https://reactjs.org/)
+- [NextJs](https://nextjs.org/)
+- [Tailwind](https://tailwindcss.com/)
+- [Convex](https://www.convex.dev/)
+- [LemonSqueezy](https://www.lemonsqueezy.com/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚓ Installation
+
+_Follow the following steps to install and setup the virtual environment._
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Samrat-14/code-hive.git
+   ```
+2. Once inside the cloned repo, get started with installing the node modules.
+   ```sh
+   npm install
+   ```
+3. Set the environment variables as per .env.example file provided
+4. Start the server for frontend.
+   ```sh
+   npm run dev
+   ```
+5. Start the convex server for backend.
+   ```sh
+   npx convex dev
+   ```
+6. After the installments are over and the server is running, you can get started with the project.
+
+## 🤝 Contributing
+
+I love contributions, so please feel free to fix bugs, improve things, provide documentation.
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+
+## 🪪 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 🌎 View Demo
+
+Live Demo: [https://samrat-codehive.vercel.app/](https://samrat-codehive.vercel.app)
+
+## 📞 Contact
+
+Your Name - [Samrat Sadhu](https://samrat-sadhu-portfolio.vercel.app/) - ss2414@ece.jgec.ac.in
