@@ -97,10 +97,83 @@ export const starSnippet = mutation({
   },
 });
 
+export const addComment = mutation({
+  args: {
+    snippetId: v.id('snippets'),
+    content: v.string(),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) throw new ConvexError('Not authenticated');
+
+    const user = await ctx.db
+      .query('users')
+      .withIndex('by_user_id')
+      .filter((q) => q.eq(q.field('userId'), identity.subject))
+      .first();
+
+    if (!user) throw new ConvexError('User not found');
+
+    return await ctx.db.insert('snippetComments', {
+      ...args,
+      userId: identity.subject,
+      userName: user.name,
+    });
+  },
+});
+
+export const deleteComment = mutation({
+  args: {
+    commentId: v.id('snippetComments'),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) throw new ConvexError('Not authenticated');
+
+    const comment = await ctx.db.get(args.commentId);
+    if (!comment) throw new Error('Comment not found');
+
+    // Check if the user is comment author
+    if (comment.userId !== identity.subject) {
+      throw new Error('Not authorized to delete this comment');
+    }
+
+    await ctx.db.delete(args.commentId);
+  },
+});
+
 export const getSnippets = query({
   handler: async (ctx) => {
     const snippets = await ctx.db.query('snippets').order('desc').collect();
     return snippets;
+  },
+});
+
+export const getSnippetById = query({
+  args: {
+    snippetId: v.id('snippets'),
+  },
+  handler: async (ctx, args) => {
+    const snippet = await ctx.db.get(args.snippetId);
+    if (!snippet) throw new Error('Snippet not found');
+
+    return snippet;
+  },
+});
+
+export const getComments = query({
+  args: {
+    snippetId: v.id('snippets'),
+  },
+  handler: async (ctx, args) => {
+    const comments = await ctx.db
+      .query('snippetComments')
+      .withIndex('by_snippet_id')
+      .filter((q) => q.eq(q.field('snippetId'), args.snippetId))
+      .order('desc')
+      .collect();
+
+    return comments;
   },
 });
 

@@ -64,3 +64,12 @@ export interface Snippet {
   title: string;
   userName: string;
 }
+
+export interface Comment {
+  _id: Id<'snippetComments'>;
+  _creationTime: number;
+  snippetId: Id<'snippets'>;
+  content: string;
+  userId: string;
+  userName: string;
+}

@@ -26,7 +26,7 @@ export default function NavigationHeader() {
 
               <div className="relative">
                 <span
-                  className="block text-lg font-semibold bg-gradient-to-r
+                  className="block text-lg font-extrabold bg-gradient-to-r
                  from-blue-400 via-blue-300 to-purple-400 text-transparent bg-clip-text"
                 >
                   CodeHive
