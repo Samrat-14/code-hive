@@ -20,14 +20,14 @@ export default async function Header() {
 
   return (
     <div className="relative z-10">
-      <div className="flex items-center lg:justify-between justify-center bg-[#0a0a0f]/80 backdrop-blur-xl px-6 py-4 mb-4 rounded-lg">
-        <div className="flex items-center gap-8">
+      <div className="flex items-center justify-between bg-[#0a0a0f]/80 backdrop-blur-xl px-4 sm:px-6 py-4 mb-4 rounded-lg">
+        <div className="flex items-center gap-4 sm:gap-8">
           <Logo />
           <SnippetsButton />
         </div>
 
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-3">
             <ThemeSelector />
             <LanguageSelector hasAccess={Boolean(convexUser?.isPro)} />
           </div>

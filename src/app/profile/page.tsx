@@ -101,7 +101,7 @@ export default function ProfilePage() {
                       }}
                     />
                   )}
-                  <tab.icon className="w-4 h-4 relative z-10" />
+                  <tab.icon className="hidden sm:block w-4 h-4 relative z-10" />
                   <span className="text-sm font-medium relative z-10">{tab.label}</span>
                 </button>
               ))}
@@ -116,11 +116,11 @@ export default function ProfilePage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="p-6"
+              className="p-4 sm:p-6"
             >
               {/* ACTIVE TAB IS EXECUTIONS: */}
               {activeTab === 'executions' && (
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   {executions?.map((execution) => (
                     <div
                       key={execution._id}
@@ -211,7 +211,7 @@ export default function ProfilePage() {
 
               {/* ACTIVE TAB IS STARS: */}
               {activeTab === 'starred' && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   {starredSnippets?.map((snippet) => (
                     <div key={snippet._id} className="group relative">
                       <Link href={`/snippets/${snippet._id}`}>

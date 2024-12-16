@@ -11,12 +11,12 @@ export default function NavigationHeader() {
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5" />
       <div className="max-w-7xl mx-auto px-4">
         <div className="relative h-16 flex items-center justify-between">
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4 sm:gap-8">
             <Logo />
             <SnippetsButton />
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             <SignedOut>
               <ProButton />
             </SignedOut>
@@ -33,11 +33,13 @@ export function SnippetsButton() {
   return (
     <Link
       href="/snippets"
-      className="relative group flex items-center gap-2 px-4 py-1.5 rounded-lg text-gray-300 bg-gray-800/50 hover:bg-blue-500/10 border border-gray-800 hover:border-blue-500/50 transition-all duration-300 shadow-lg overflow-hidden"
+      className="relative group flex items-center gap-2 px-2 sm:px-4 py-2 rounded-lg text-gray-300 bg-gray-800/50 hover:bg-blue-500/10 border border-gray-800 hover:border-blue-500/50 transition-all duration-300 shadow-lg overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
       <Code2 className="w-4 h-4 relative z-10 group-hover:rotate-3 transition-transform" />
-      <span className="text-sm font-medium relative z-10 group-hover:text-white transition-colors">Snippets</span>
+      <span className="hidden sm:inline-block text-sm font-medium relative z-10 group-hover:text-white transition-colors">
+        Snippets
+      </span>
     </Link>
   );
 }
@@ -46,10 +48,10 @@ export function ProButton() {
   return (
     <Link
       href="/pricing"
-      className="flex items-center gap-2 px-4 py-1.5 rounded-lg border border-amber-500/20 hover:border-amber-500/40 bg-gradient-to-r from-amber-500/10 to-orange-500/10 hover:from-amber-500/20 hover:to-orange-500/20 transition-all duration-300"
+      className="flex items-center gap-2 px-2 sm:px-4 py-2 rounded-lg border border-amber-500/20 hover:border-amber-500/40 bg-gradient-to-r from-amber-500/10 to-orange-500/10 hover:from-amber-500/20 hover:to-orange-500/20 transition-all duration-300"
     >
       <Sparkles className="w-4 h-4 text-amber-400 hover:text-amber-300" />
-      <span className="text-sm font-medium text-amber-400/90 hover:text-amber-300">Pro</span>
+      <span className="hidden sm:inline-block text-sm font-medium text-amber-400/90 hover:text-amber-300">Pro</span>
     </Link>
   );
 }

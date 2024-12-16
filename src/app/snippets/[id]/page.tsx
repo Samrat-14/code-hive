@@ -73,7 +73,7 @@ export default function SnippetPage() {
                   </div>
                 </div>
               </div>
-              <div className="inline-flex items-center px-3 py-1.5 bg-[#ffffff08] text-[#808086] rounded-lg text-sm font-medium">
+              <div className="hidden sm:inline-flex items-center px-3 py-1.5 bg-[#ffffff08] text-[#808086] rounded-lg text-sm font-medium">
                 {snippet.language}
               </div>
             </div>

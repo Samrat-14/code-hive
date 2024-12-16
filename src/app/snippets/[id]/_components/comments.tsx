@@ -50,14 +50,14 @@ export default function Comments({ snippetId }: { snippetId: Snippet['_id'] }) {
 
   return (
     <div className="bg-[#121218] border border-[#ffffff0a] rounded-2xl overflow-hidden">
-      <div className="px-6 sm:px-8 pt-6 border-b border-[#ffffff0a]">
+      <div className="px-4 sm:px-8 pt-6 border-b border-[#ffffff0a]">
         <h2 className="text-lg font-semibold text-white flex items-center gap-2">
           <MessageSquare className="w-5 h-5" />
           Discussion ({comments.length})
         </h2>
       </div>
 
-      <div className="p-6 sm:p-8">
+      <div className="p-4 sm:p-8">
         {user ? (
           <CommentForm onSubmit={handleSubmitComment} isSubmitting={isSubmitting} />
         ) : (
