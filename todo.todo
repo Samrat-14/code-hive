@@ -8,6 +8,8 @@
 [ ] refactor: sync snippet theme from user config
 [ ] refactor: same size for comments, code-executions in profile; expand to see more { refactor code-block}
 
+[*] fix: redirect to homepage after paymeny checkout
+[*] fix: show fallback name from email when name is absent
 [ ] fix: not-found page
 [ ] fix: dark mode for toast, clerk
 [ ] fix: footer pages

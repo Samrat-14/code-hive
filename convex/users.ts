@@ -17,7 +17,7 @@ export const syncUser = mutation({
       await ctx.db.insert('users', {
         userId: args.userId,
         email: args.email,
-        name: args.name,
+        name: args.name || args.email.split('@')[0],
         isPro: false,
       });
     }
